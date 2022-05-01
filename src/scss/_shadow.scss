@@ -15,7 +15,7 @@
   &_close {
     fill: #ff0000;
     width: 25px;
-    & * > {
+    & > * {
       fill: #ff0000;
     }
   }
@@ -23,7 +23,7 @@
   &_check {
     fill: #47ae74;
     width: 30px;
-    & * > {
+    & > * {
       fill: #47ae74;
     }
   }

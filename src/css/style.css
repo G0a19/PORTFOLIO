@@ -782,12 +782,12 @@ body {
   .shadow_close {
     fill: #ff0000;
     width: 25px; }
-    .shadow_close * > {
+    .shadow_close > * {
       fill: #ff0000; }
   .shadow_check {
     fill: #47ae74;
     width: 30px; }
-    .shadow_check * > {
+    .shadow_check > * {
       fill: #47ae74; }
   .shadow_btn {
     width: 25px; }
