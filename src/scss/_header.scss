@@ -1,0 +1,154 @@
+.header {
+  width: 100%;
+  position: fixed;
+  background-color: #000;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: $pc) {
+    height: 100px;
+    padding: 0 67px;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(9px);
+  }
+
+  &_title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    @media (min-width: $pc) {
+      font-size: 30px;
+    }
+  }
+}
+
+.space {
+  height: 60px;
+  @media (min-width: $pc) {
+    height: 100px;
+  }
+}
+
+// burger menu
+.burger-menu {
+  width: 36px;
+  display: block;
+  transition: all 0.3s;
+  cursor: pointer;
+  height: 28px;
+
+  @media (min-width: $pc) {
+    display: none;
+  }
+}
+.burger-menu .bar {
+  transition: all 0.3s;
+  height: 4px;
+  width: 100%;
+  display: block;
+  background-color: #fff;
+  /* border-radius: 2px; */
+}
+.burger-menu .bar:nth-of-type(2) {
+  margin: 8px 0;
+}
+.burger-menu--closed {
+  transition-delay: 0.3s;
+}
+.burger-menu--closed .bar {
+  float: left;
+}
+.burger-menu--closed .bar:nth-of-type(2) {
+  width: 28px;
+  transition-property: margin, height, width;
+  transition-delay: 0.3s, 0.3s, 0s;
+}
+.burger-menu--closed .bar:nth-of-type(3) {
+  width: 32px;
+}
+.burger-menu--closed:hover .bar:nth-of-type(2) {
+  width: 100%;
+}
+.burger-menu--closed:hover .bar:nth-of-type(3) {
+  width: 100%;
+}
+.burger-menu--opened {
+  padding-top: 12px;
+}
+.burger-menu--opened .bar:nth-of-type(1) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transition-delay: 0.3s;
+  height: 4px;
+}
+.burger-menu--opened .bar:nth-of-type(2) {
+  opacity: 0;
+  height: 0;
+  margin: -4px 0;
+}
+.burger-menu--opened .bar:nth-of-type(3) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  transition-delay: 0.3s;
+  height: 4px;
+}
+
+// menu
+.header_menu {
+  display: none;
+  @media (min-width: $pc) {
+    display: block;
+  }
+
+  &-wrapper {
+    display: flex;
+  }
+
+  &-single {
+    margin-left: 62px;
+    position: relative;
+    overflow: hidden;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:hover span {
+      transform: translateY(125%);
+    }
+
+    span {
+      position: relative;
+      display: inline-block;
+      letter-spacing: 1px;
+      margin: 0;
+      transition: all 0.35s ease;
+      cursor: pointer;
+
+      &::before {
+        bottom: 100%;
+        display: block;
+        height: 3px;
+        width: 100%;
+        content: "";
+      }
+
+      &::after {
+        padding: 0.3em 0;
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        content: attr(data-hover);
+        color: #fff;
+        white-space: nowrap;
+      }
+    }
+  }
+}
