@@ -16,7 +16,6 @@
     "cleanup": "rm -rf .cache dist",
     "dev": "npm run cleanup && parcel src/index.html"
   },
-  "type": "module",
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -34,5 +33,4 @@
   "devDependencies": {
     "parcel": "^2.5.0"
   }
-  
 }
