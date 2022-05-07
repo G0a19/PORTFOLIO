@@ -23,6 +23,9 @@ const scrollTo = function (element) {
 $("#descriptionMenu").on("click", function () {
   scrollTo(".description");
 });
+$("#accomplishmentsMenu").on("click", function () {
+  scrollTo(".accomplishments");
+});
 $("#skillsMenu").on("click", function () {
   scrollTo(".skills");
 });
@@ -32,6 +35,9 @@ $("#contantMenu").on("click", function () {
 
 $("#descriptionMenuDesktop").on("click", function () {
   scrollTo(".description");
+});
+$("#accomplishmentsMenuDesktop").on("click", function () {
+  scrollTo(".accomplishments");
 });
 $("#skillsMenuDesktop").on("click", function () {
   scrollTo(".skills");

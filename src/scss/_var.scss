@@ -1,2 +1,13 @@
 $tablet: 768px;
 $pc: 992px;
+
+@mixin main-title {
+  font-size: 30px;
+  font-weight: 300;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  @media (min-width: $pc) {
+    font-size: 46px;
+  }
+}

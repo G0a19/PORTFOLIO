@@ -106,6 +106,14 @@
   animation: show_form_left 0.4s;
 }
 
+.show_form_bottom {
+  animation: show_form_bottom 0.4s;
+}
+
+.hide_form_bottom {
+  animation: hide_form_bottom 0.4s;
+}
+
 @keyframes show_form_left {
   from {
     opacity: 0;
@@ -127,5 +135,29 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes show_form_bottom {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hide_form_bottom {
+  from {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(100%);
   }
 }

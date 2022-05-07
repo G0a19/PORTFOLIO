@@ -49,19 +49,25 @@ $(function () {
   }
 });
 
-const skillsPoint = new Waypoint({
-  element: document.querySelector(".skills"),
-  offset: "80%",
-  handler: function (e) {
-    if ($(`.skills_icons-single`).hasClass("hide")) {
-      const i = document.querySelectorAll(`.skills_icons-single`);
-      i.forEach((e, t) => {
-        setTimeout(() => {
-          if (t % 2 === 0)
-            $(e).removeClass("hide"), $(e).addClass("show_form_left");
-          else $(e).removeClass("hide"), $(e).addClass("show_form_right");
-        }, 300 * t);
-      });
-    }
-  },
-});
+setTimeout(() => {
+  const skillsPoint = new Waypoint({
+    element: document.querySelector(".skills"),
+    offset: "80%",
+    handler: function (e) {
+      if ($(`.skills_icons-single`).hasClass("hide")) {
+        const i = document.querySelectorAll(`.skills_icons-single`);
+        i.forEach((e, t) => {
+          setTimeout(() => {
+            if ($(window).width() < 992) {
+              if (t % 2 === 0)
+                $(e).removeClass("hide"), $(e).addClass("show_form_left");
+              else $(e).removeClass("hide"), $(e).addClass("show_form_right");
+            } else {
+              $(e).removeClass("hide"), $(e).addClass("show_form_bottom");
+            }
+          }, 300 * t);
+        });
+      }
+    },
+  });
+}, 500);

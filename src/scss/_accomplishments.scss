@@ -1,0 +1,144 @@
+.accomplishments {
+  padding-bottom: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 36px 0;
+  z-index: 1;
+  background-image: url("./../images/accomplishment-background-mobile.png");
+  background-position: left;
+  @media (min-width: $pc) {
+    background-image: url("./../images/accomplishment-background.jpg");
+    background-position: center;
+    padding: 79px 0 79px 0;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &::after {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
+  }
+
+  &::before {
+    background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
+  }
+
+  &_content {
+    max-width: 1520px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  &_title {
+    @include main-title;
+    margin-bottom: 60px;
+    @media (min-width: $pc) {
+      margin-bottom: 100px;
+    }
+  }
+
+  &_wrapper {
+  }
+
+  &_single {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    &-wrapper {
+      position: relative;
+    }
+    &-play {
+      position: absolute;
+      width: 40px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+      @media (min-width: $pc) {
+        width: 60px;
+      }
+    }
+    &-img {
+      margin-bottom: 10px;
+      width: 100%;
+      max-width: 500px;
+      @media (min-width: $pc) {
+        max-width: none;
+        max-height: 700px;
+      }
+    }
+
+    &-description {
+      font-size: 13px;
+      line-height: 1.65;
+      letter-spacing: normal;
+      color: #000;
+      z-index: 2;
+      max-width: 500px;
+      @media (min-width: $tablet) {
+        font-size: 20px;
+      }
+      @media (min-width: $pc) {
+        max-width: none;
+      }
+    }
+  }
+}
+
+.video {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  &_close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    fill: #ff0000;
+    cursor: pointer;
+  }
+  video {
+    width: 300px;
+    object-fit: contain;
+    height: 70%;
+    @media (min-width: $pc) {
+      width: auto;
+      height: 80%;
+    }
+  }
+}
+
+// btns
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+  @media (min-width: $pc) {
+    display: block !important;
+  }
+}

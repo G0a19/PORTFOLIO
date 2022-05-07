@@ -40,14 +40,9 @@
   }
 
   &_title {
-    font-size: 30px;
-    font-weight: 300;
-    color: #000;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+    @include main-title;
     @media (min-width: $pc) {
-      font-size: 46px;
+      margin-bottom: 10px;
     }
   }
 

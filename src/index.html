@@ -26,6 +26,9 @@
           <li class="header_menu-single" id="descriptionMenuDesktop">
             <span data-hover="about me">about me</span>
           </li>
+          <li class="header_menu-single" id="accomplishmentsMenuDesktop">
+            <span data-hover="accomplishments">accomplishments</span>
+          </li>
           <li class="header_menu-single" id="skillsMenuDesktop">
             <span data-hover="skills">skills</span>
           </li>
@@ -41,6 +44,9 @@
     <div class="dropdown">
       <ul class="dropdown_wrapper">
         <li class="dropdown_wrapper-single" id="descriptionMenu">about me</li>
+        <li class="dropdown_wrapper-single" id="accomplishmentsMenu">
+          accomplishments
+        </li>
         <li class="dropdown_wrapper-single" id="skillsMenu">skills</li>
         <li class="dropdown_wrapper-single" id="contantMenu">contant</li>
       </ul>
@@ -56,7 +62,9 @@
             <span class="letters">Full stack developer</span>
           </span>
         </h1>
-        <a class="topBanner_link">Download CV</a>
+        <a href="./Gal mafgaonker - CV.pdf" class="topBanner_link" download
+          >Download CV</a
+        >
       </div>
       <div class="topBanner_anotherside"></div>
       <button class="topBanner_scroll"></button>
@@ -221,6 +229,100 @@
       </div>
     </div>
 
+    <div class="accomplishments">
+      <div class="accomplishments_content">
+        <h2 class="accomplishments_title">Accomplishments</h2>
+        <!-- start swiper -->
+        <div class="accomplishments_wrapper swiper">
+          <div class="swiper-wrapper">
+            <!-- slide 1 -->
+            <div class="accomplishments_single swiper-slide">
+              <div class="accomplishments_single-wrapper">
+                <img
+                  class="accomplishments_single-img"
+                  id="dbrithdayImage"
+                  src="./images/dbirthday-image.jpg"
+                  alt="dbirthday"
+                />
+                <svg
+                  class="accomplishments_single-play"
+                  id="dbirthdayPlay"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM176 168V344C176 352.7 180.7 360.7 188.3 364.9C195.8 369.2 205.1 369 212.5 364.5L356.5 276.5C363.6 272.1 368 264.4 368 256C368 247.6 363.6 239.9 356.5 235.5L212.5 147.5C205.1 142.1 195.8 142.8 188.3 147.1C180.7 151.3 176 159.3 176 168V168z"
+                  />
+                </svg>
+              </div>
+              <div class="accomplishments_single-description">
+                The dbirthday app was created to remember my and my girlfriend's
+                happy days and the experience we had that year we celebrated.
+                The app was built by React, Node.js and the photos the app
+                uploads to Drive. The app is basically a website that with the
+                help of GoNative has become an app
+              </div>
+            </div>
+            <!-- slide 2 -->
+            <div class="accomplishments_single swiper-slide">
+              <div class="accomplishments_single-wrapper">
+                <img
+                  class="accomplishments_single-img"
+                  src="./images/compri.png"
+                  alt="dbirthday"
+                />
+              </div>
+              <div class="accomplishments_single-description">
+                Compri site is a site whose purpose is to compare prices of
+                fruits and vegetables, the site displays real-time real-time
+                price of the sites that appear on the site.
+                <a href="https://www.compri.co.il/" target="_blank"
+                  >link to a website</a
+                >
+              </div>
+            </div>
+            <!-- slide 3 -->
+            <div class="accomplishments_single swiper-slide">
+              <div class="accomplishments_single-wrapper">
+                <img
+                  class="accomplishments_single-img"
+                  src="./images/bezeqSpeedTest.png"
+                  alt="dbirthday"
+                />
+              </div>
+              <div class="accomplishments_single-description">
+                The Bezeq website's speed test page was developed by. A page
+                that aims to test the user's browsing speed
+                <a
+                  href="https://www.bezeq.co.il/internetandphone/internet/speedtest/"
+                  target="_blank"
+                  >link to a website</a
+                >
+              </div>
+            </div>
+            <!-- slide 4 -->
+            <div class="accomplishments_single swiper-slide">
+              <img
+                class="accomplishments_single-img"
+                src="./images/excellence.png"
+                alt="dbirthday"
+              />
+              <div
+                class="accomplishments_single-description"
+                id="excellenceImage"
+              >
+                A year of excellence in the Information Systems degree at the
+                Ramat Gan Academic College. An average of 98.81
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <!-- end swiper -->
+      </div>
+    </div>
+
     <div class="slides">
       <!-- skills -->
       <div class="skills slide">
@@ -378,6 +480,23 @@
       <span class="loader" style="display: none"></span>
     </div>
 
+    <!-- start video -->
+    <div class="video">
+      <svg
+        class="video_close"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 384 512"
+      >
+        <path
+          d="M376.6 427.5c11.31 13.58 9.484 33.75-4.094 45.06c-5.984 4.984-13.25 7.422-20.47 7.422c-9.172 0-18.27-3.922-24.59-11.52L192 305.1l-135.4 162.5c-6.328 7.594-15.42 11.52-24.59 11.52c-7.219 0-14.48-2.438-20.47-7.422c-13.58-11.31-15.41-31.48-4.094-45.06l142.9-171.5L7.422 84.5C-3.891 70.92-2.063 50.75 11.52 39.44c13.56-11.34 33.73-9.516 45.06 4.094L192 206l135.4-162.5c11.3-13.58 31.48-15.42 45.06-4.094c13.58 11.31 15.41 31.48 4.094 45.06l-142.9 171.5L376.6 427.5z"
+        />
+      </svg>
+      <video class="video_dbirthday" loop playsinline controls="true">
+        <source src="./images/dbirthday.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <!-- end video -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./javascript/way-point.js"></script>
@@ -397,6 +516,7 @@
     <script src="./javascript/header.js"></script>
     <script src="./javascript/top-banner.js"></script>
     <script src="./javascript/about-me.js"></script>
+    <script src="./javascript/accomplishments.js"></script>
     <script src="./javascript/skills.js"></script>
     <script src="./javascript/form.js"></script>
   </body>
