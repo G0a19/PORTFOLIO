@@ -1,5 +1,6 @@
 var accomplishmentsSwiper = new Swiper(".accomplishments_wrapper", {
   slidesPerView: "auto",
+  loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -12,6 +13,11 @@ var accomplishmentsSwiper = new Swiper(".accomplishments_wrapper", {
     },
     992: {
       slidesPerView: 2,
+      centeredSlides: true,
+      spaceBetween: 50,
+    },
+    1200: {
+      slidesPerView: 3,
       centeredSlides: true,
       spaceBetween: 50,
     },

@@ -1,52 +1,20 @@
-VANTA.CLOUDS({
-  el: ".topBanner_anotherside",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.0,
-  minWidth: 200.0,
-  sunColor: 0xff8000,
-  sunGlareColor: 0x7a3b1d,
-  sunlightColor: 0xdcdcdc,
-  speed: 1.7,
-});
-
-var textWrapper = document.querySelector(".ml11 .letters");
+var textWrapper = document.querySelector(".ml9 .letters");
 textWrapper.innerHTML = textWrapper.textContent.replace(
-  /([^\x00-\x80]|\w)/g,
+  /\S/g,
   "<span class='letter'>$&</span>"
 );
 
 anime
   .timeline({ loop: true })
   .add({
-    targets: ".ml11 .line",
-    scaleY: [0, 1],
-    opacity: [0.2, 1],
-    easing: "easeOutExpo",
-    duration: 700,
+    targets: ".ml9 .letter",
+    scale: [0, 1],
+    duration: 1500,
+    elasticity: 600,
+    delay: (el, i) => 45 * (i + 1),
   })
   .add({
-    targets: ".ml11 .line",
-    translateX: [
-      0,
-      document.querySelector(".ml11 .letters").getBoundingClientRect().width +
-        10,
-    ],
-    easing: "easeOutExpo",
-    duration: 700,
-    delay: 100,
-  })
-  .add({
-    targets: ".ml11 .letter",
-    opacity: [0, 1],
-    easing: "easeOutExpo",
-    duration: 600,
-    offset: "-=775",
-    delay: (el, i) => 34 * (i + 1),
-  })
-  .add({
-    targets: ".ml11",
+    targets: ".ml9",
     opacity: 0,
     duration: 1000,
     easing: "easeOutExpo",
@@ -60,4 +28,26 @@ $(".topBanner_scroll").on("click", function () {
     },
     1000
   );
+});
+
+$(function () {
+  $(document).ready(function () {
+    0 < $(".topBanner_oneside").length &&
+      jQuery(document).mousemove(function (t) {
+        var e = jQuery(this).find("img"),
+          a = t.pageX - jQuery(window).outerWidth() / 2,
+          r = t.pageY - jQuery(window).outerHeight() / 2;
+        e.each(function () {
+          var t = a / jQuery(this).data("speed"),
+            e = r / jQuery(this).data("speed");
+          jQuery(this).css({
+            "-webkit-transform": "translate3d(" + t + "px," + e + "px,0px)",
+            "-moz-transform": "translate3d(" + t + "px," + e + "px,0px)",
+            "-ms-transform": "translate3d(" + t + "px," + e + "px,0px)",
+            "-o-transform": "translate3d(" + t + "px," + e + "px,0px)",
+            transform: "translate3d(" + t + "px," + e + "px,0px)",
+          });
+        });
+      });
+  });
 });

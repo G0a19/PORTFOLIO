@@ -60,19 +60,31 @@
     <!-- top banner -->
     <div class="topBanner">
       <div class="topBanner_oneside">
-        <h1 class="topBanner_title">Gal Mafgaonker</h1>
-        <h1 class="topBanner_role ml11">
-          <span class="text-wrapper">
-            <span class="line line1"></span>
-            <span class="letters">Full stack developer</span>
-          </span>
-        </h1>
-        <a href="./Gal mafgaonker - CV.pdf" class="topBanner_link" download
-          >Download CV</a
-        >
+        <img
+          src="./images/web.png"
+          alt="web"
+          style="z-index: 2"
+          data-speed="50"
+        />
+        <img
+          data-speed="20"
+          src="./images/code.png"
+          alt="code"
+          style="position: absolute; z-index: 1"
+        />
       </div>
-      <div class="topBanner_anotherside"></div>
-      <button class="topBanner_scroll"></button>
+      <div class="topBanner_anotherside">
+        <h1 class="topBanner_anotherside-name">Gal mafgaonker</h1>
+        <h2 class="topBanner_anotherside-role ml9">
+          <span class="text-wrapper">
+            <span class="letters">Full Stack Developer</span>
+          </span>
+        </h2>
+        <a class="topBanner_anotherside-cv" href="./Gal mafgaonker - CV.pdf">
+          <span>download cv</span>
+        </a>
+      </div>
+      <!-- <button class="topBanner_scroll"></button> -->
     </div>
 
     <!-- about me -->
@@ -321,8 +333,20 @@
               </div>
             </div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <button class="swiper-button-prev">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+              <path
+                d="M137.4 406.6l-128-127.1C3.125 272.4 0 264.2 0 255.1s3.125-16.38 9.375-22.63l128-127.1c9.156-9.156 22.91-11.9 34.88-6.943S192 115.1 192 128v255.1c0 12.94-7.781 24.62-19.75 29.58S146.5 415.8 137.4 406.6z"
+              ></path>
+            </svg>
+          </button>
+          <button class="swiper-button-next">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+              <path
+                d="M118.6 105.4l128 127.1C252.9 239.6 256 247.8 256 255.1s-3.125 16.38-9.375 22.63l-128 127.1c-9.156 9.156-22.91 11.9-34.88 6.943S64 396.9 64 383.1V128c0-12.94 7.781-24.62 19.75-29.58S109.5 96.23 118.6 105.4z"
+              ></path>
+            </svg>
+          </button>
         </div>
         <!-- end swiper -->
       </div>
@@ -335,40 +359,40 @@
           <div class="skills_title">My skills</div>
           <!--  -->
           <div class="skills_icons">
-            <div class="skills_icons-single hide">
+            <div class="skills_icons-single hide" data-skill="1">
               <img src="./images/html.png" alt="html" />
             </div>
-            <div class="skills_icons-single hide">
+            <div class="skills_icons-single hide" data-skill="2">
               <img src="./images/css.png" alt="css" />
             </div>
-            <div class="skills_icons-single hide">
+            <div class="skills_icons-single hide" data-skill="3">
               <img src="./images/scss.png" alt="scss" />
             </div>
-            <div class="skills_icons-single hide">
+            <div class="skills_icons-single hide" data-skill="4">
               <img src="./images/js.png" alt="js" />
             </div>
-            <div class="skills_icons-single hide">
+            <div class="skills_icons-single hide" data-skill="5">
               <img src="./images/jquery.png" alt="jquery" />
             </div>
-            <div class="skills_icons-single hide">
+            <div class="skills_icons-single hide" data-skill="6">
               <img src="./images/react.png" alt="react" />
             </div>
-            <div class="skills_icons-single hide">
+            <div class="skills_icons-single hide" data-skill="7">
               <img src="./images/node js.png" alt="nodejs" />
             </div>
-            <div class="skills_icons-single hide">
+            <div class="skills_icons-single hide" data-skill="8">
               <img src="./images/php.png" alt="php" />
             </div>
-            <div class="skills_icons-single hide">
+            <div class="skills_icons-single hide" data-skill="9">
               <img src="./images/c.png" alt="c#" />
             </div>
-            <div class="skills_icons-single hide">
+            <div class="skills_icons-single hide" data-skill="10">
               <img src="./images/java.png" alt="java" />
             </div>
-            <div class="skills_icons-single hide">
+            <div class="skills_icons-single hide" data-skill="11">
               <img src="./images/sql.png" alt="sql" />
             </div>
-            <div class="skills_icons-single hide">
+            <div class="skills_icons-single hide" data-skill="12">
               <img src="./images/mongodb.png" alt="java" />
             </div>
           </div>
@@ -516,7 +540,6 @@
 
     <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.clouds.min.js"></script>
 
     <script src="./javascript/header.js"></script>
     <script src="./javascript/top-banner.js"></script>
